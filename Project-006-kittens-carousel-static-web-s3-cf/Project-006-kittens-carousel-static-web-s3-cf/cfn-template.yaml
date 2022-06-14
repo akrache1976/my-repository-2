@@ -4,10 +4,10 @@ Description: |
 
 Parameters:
   DomainName:
-    Description: DNS Name of existing Amazon Route 53 hosted zone. exp. clarusway.us
+    Description: DNS Name of existing Amazon Route 53 hosted zone. exp. awsmohammed.link
     Type: AWS::Route53::HostedZone::Id
   KittensDomainName:
-    Description: Full domain name for the App. ex. kittens.clarusway.us
+    Description: Full domain name for the App. ex. kittens.awsmohammed.link
     Type: String
     AllowedPattern: (?!-)[a-zA-Z0-9-.]{1,63}(?<!-)
 
@@ -78,7 +78,7 @@ Resources:
         - Name: !Ref KittensDomainName
           Type: A
           AliasTarget:
-            HostedZoneId: Z2FDTNDATAQYW2 
+            HostedZoneId: Z08932222Z4FJPFFT66E5
             DNSName: !GetAtt KittensCloudfront.DomainName
 Outputs:
   BucketName: 
